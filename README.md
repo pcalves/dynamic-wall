@@ -1,20 +1,10 @@
-# Dynamic wall
+Fork of https://gitlab.com/RaitaroH/dynamic-wall.git for my own use.
 
-I wanted to improve what a guy made on reddit. [/u/Electronicbrain](https://www.reddit.com/r/unixporn/comments/a7mga5/plasma_a_clone_of_macos_mojaves_dynamic_wallpaper/)
+Wallpaper from http://dynwalls.com/#
 
-Also check out my [better repo here](https://gitlab.com/RaitaroH/KDE-Terminal-Wallpaper-Changer)
+Use cron to run.
 
-#### Installation:  
-
-Clone and... basically just have the 2 scripts in your `~/bin`. 
-
-You can also put the pics somewhere else but I provide a var you could change for that.
-
-Not so fancy, but I expect you to know what to do.
-
-#### Cronjob
-
-You can use a cron to call the script. Make sure you just comment out the while bits and leave the rest.
 ```
-*/30 * * * * ~/bin/dynamic`
-```
+crontab -e
+
+*/30 * * * * ~/.scripts/dynamic-wall/dynamic
