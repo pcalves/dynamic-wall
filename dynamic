@@ -1,12 +1,14 @@
 #!/bin/bash
-date=$(date +%H | sed 's/\<0//g')
+PATH=/bin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/opt/coreutils/libexec/gnubin:/Applications/kitty.app/Contents/MacOS
+path="$HOME/.scripts/dynamic-wall/wallpapers"
+date=$(date +%H | sed 's/^0*//')
 
 if [[ "$date" -le "9" ]]; then
-  sh ~/.scripts/wal.sh "$PWD/wallpapers/dynamic_$(($date - 4)).tiff"
+  sh ~/.scripts/wal.sh "$path/dynamic_$(($date - 4)).tiff"
 elif [[ "$date" -le "16" ]]; then
-  sh ~/.scripts/wal.sh "$PWD/wallpapers/dynamic_$(($date - 5)).tiff"
+  sh ~/.scripts/wal.sh "$path/dynamic_$(($date - 5)).tiff"
 elif [[ "$date" -le "21" ]]; then
-  sh ~/.scripts/wal.sh "$PWD/wallpapers/dynamic_$(($date - 6)).tiff"
+  sh ~/.scripts/wal.sh "$path/dynamic_$(($date - 6)).tiff"
 else
-  sh ~/.scripts/wal.sh "$PWD/wallpapers/dynamic_16.tiff"
+  sh ~/.scripts/wal.sh "$path/dynamic_16.tiff"
 fi
